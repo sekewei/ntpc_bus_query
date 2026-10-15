@@ -1,0 +1,3 @@
+﻿routes with stops but no eta: 0
+routes with eta but no stops: 0
+routes with goback=0 stops but no goback=0 eta: 327

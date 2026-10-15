@@ -1,0 +1,1367 @@
+https://tdx.transportdata.tw/api-service/swagger
+
+1a 查詢公車站牌，回傳路線站序供顯示用
+   /v2/Bus/DisplayStopOfRoute/City/{City}/{RouteName}
+
+curl -X 'GET' \
+  'https://tdx.transportdata.tw/api/basic/v2/Bus/DisplayStopOfRoute/City/NewTaipei/%E7%B4%8528?%24top=30&%24format=JSON' \
+  -H 'accept: application/json'
+
+https://tdx.transportdata.tw/api/basic/v2/Bus/DisplayStopOfRoute/City/NewTaipei/%E7%B4%8528?%24top=30&%24format=JSON
+
+ access-control-allow-origin: * 
+ content-encoding: br 
+ content-length: 1178 
+ content-type: application/json; charset=utf-8 
+ date: Thu,15 Oct 2026 07:58:54 GMT 
+ last-modified: Thu,15 Oct 2026 06:16:17 GMT 
+ location:  
+ ratelimit-limit: 20 
+ ratelimit-remaining: 16 
+ ratelimit-reset: 57666 
+ server: nginx 
+ strict-transport-security: max-age=63072000; includeSubDomains; preload 
+ vary: Accept-Encoding 
+ via: kong/2.8.3 
+ x-frame-options: SAMEORIGIN 
+ x-kong-proxy-latency: 63 
+ x-kong-upstream-latency: 13 
+ x-ratelimit-limit-day: 20 
+ x-ratelimit-remaining-day: 16 
+
+[
+  {
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "Stops": [
+      {
+        "StopUID": "NWT114541",
+        "StopID": "114541",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": -1,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101"
+      },
+      {
+        "StopUID": "NWT114542",
+        "StopID": "114542",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang Community"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4503864,
+          "PositionLat": 25.173067,
+          "GeoHash": "wsqr5wt7x"
+        },
+        "StationID": "74983"
+      },
+      {
+        "StopUID": "NWT195846",
+        "StopID": "195846",
+        "StopName": {
+          "Zh_tw": "文宏廣場",
+          "En": "Wenhong Square"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.4512608,
+          "PositionLat": 25.170978,
+          "GeoHash": "wsqr5wnpe"
+        },
+        "StationID": "74648"
+      },
+      {
+        "StopUID": "NWT114544",
+        "StopID": "114544",
+        "StopName": {
+          "Zh_tw": "淡江柏園",
+          "En": "Danjiangboyuan"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.45078,
+          "PositionLat": 25.170154,
+          "GeoHash": "wsqr5wjfb"
+        },
+        "StationID": "1165605655"
+      },
+      {
+        "StopUID": "NWT114545",
+        "StopID": "114545",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Village"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 5,
+        "StopPosition": {
+          "PositionLon": 121.4478578,
+          "PositionLat": 25.169,
+          "GeoHash": "wsqr5tgsh"
+        },
+        "StationID": "74645"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  },
+  {
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "Stops": [
+      {
+        "StopUID": "NWT114546",
+        "StopID": "114546",
+        "StopName": {
+          "Zh_tw": "捷運淡水站",
+          "En": "MRT DANSHUI Station"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.446540610778,
+          "PositionLat": 25.1674549071321,
+          "GeoHash": "wsqr5tdej"
+        },
+        "StationID": "3842"
+      },
+      {
+        "StopUID": "NWT114537",
+        "StopID": "114537",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Villa"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4480999,
+          "PositionLat": 25.169193,
+          "GeoHash": "wsqr5tgv1"
+        },
+        "StationID": "74644"
+      },
+      {
+        "StopUID": "NWT114538",
+        "StopID": "114538",
+        "StopName": {
+          "Zh_tw": "淡江柏園",
+          "En": "Tamkang"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.450727,
+          "PositionLat": 25.169986,
+          "GeoHash": "wsqr5wj9z"
+        },
+        "StationID": "74649"
+      },
+      {
+        "StopUID": "NWT114543",
+        "StopID": "114543",
+        "StopName": {
+          "Zh_tw": "文宏廣場",
+          "En": "Wenhong Square"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.451395,
+          "PositionLat": 25.171023,
+          "GeoHash": "wsqr5wnpy"
+        },
+        "StationID": "1165604407"
+      },
+      {
+        "StopUID": "NWT114539",
+        "StopID": "114539",
+        "StopName": {
+          "Zh_tw": "學府路口",
+          "En": "Xuefu Rd. Entrance"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 5,
+        "StopPosition": {
+          "PositionLon": 121.4503368,
+          "PositionLat": 25.171772,
+          "GeoHash": "wsqr5wmkj"
+        },
+        "StationID": "75105"
+      },
+      {
+        "StopUID": "NWT114540",
+        "StopID": "114540",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang University City"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 6,
+        "StopPosition": {
+          "PositionLon": 121.450209,
+          "PositionLat": 25.173253,
+          "GeoHash": "wsqr5wtkf"
+        },
+        "StationID": "74704"
+      },
+      {
+        "StopUID": "NWT204373",
+        "StopID": "204373",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 7,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  },
+  {
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 0,
+    "Stops": [
+      {
+        "StopUID": "NWT152351",
+        "StopID": "152351",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": -1,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101"
+      },
+      {
+        "StopUID": "NWT152352",
+        "StopID": "152352",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang University City"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4503864,
+          "PositionLat": 25.173067,
+          "GeoHash": "wsqr5wt7x"
+        },
+        "StationID": "74983"
+      },
+      {
+        "StopUID": "NWT152353",
+        "StopID": "152353",
+        "StopName": {
+          "Zh_tw": "鄧公國小",
+          "En": "Denggong Elementary School"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.4491908,
+          "PositionLat": 25.171269,
+          "GeoHash": "wsqr5wk97"
+        },
+        "StationID": "74652"
+      },
+      {
+        "StopUID": "NWT152354",
+        "StopID": "152354",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Village"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.4478578,
+          "PositionLat": 25.169,
+          "GeoHash": "wsqr5tgsh"
+        },
+        "StationID": "74645"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  },
+  {
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 1,
+    "Stops": [
+      {
+        "StopUID": "NWT152347",
+        "StopID": "152347",
+        "StopName": {
+          "Zh_tw": "捷運淡水站",
+          "En": "MRT Tamsui Sta."
+        },
+        "StopBoarding": 0,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.446540610778,
+          "PositionLat": 25.1674549071321,
+          "GeoHash": "wsqr5tdej"
+        },
+        "StationID": "3842"
+      },
+      {
+        "StopUID": "NWT152348",
+        "StopID": "152348",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Village"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4480999,
+          "PositionLat": 25.169193,
+          "GeoHash": "wsqr5tgv1"
+        },
+        "StationID": "74644"
+      },
+      {
+        "StopUID": "NWT152349",
+        "StopID": "152349",
+        "StopName": {
+          "Zh_tw": "鄧公國小",
+          "En": "Denggong Elementary School"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.4494646,
+          "PositionLat": 25.171206,
+          "GeoHash": "wsqr5wkbc"
+        },
+        "StationID": "74646"
+      },
+      {
+        "StopUID": "NWT152350",
+        "StopID": "152350",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang University City"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.450209,
+          "PositionLat": 25.173253,
+          "GeoHash": "wsqr5wtkf"
+        },
+        "StationID": "74704"
+      },
+      {
+        "StopUID": "NWT152355",
+        "StopID": "152355",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 5,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  }
+]
+
+----------------------------------------
+1b 查詢公車站牌，回傳路線站序 / 營運站序
+   /v2/Bus/StopOfRoute/City/{City}/{RouteName}
+
+curl -X 'GET' \
+  'https://tdx.transportdata.tw/api/basic/v2/Bus/StopOfRoute/City/NewTaipei/%E7%B4%8528?%24top=30&%24format=JSON' \
+  -H 'accept: application/json'
+
+https://tdx.transportdata.tw/api/basic/v2/Bus/StopOfRoute/City/NewTaipei/%E7%B4%8528?%24top=30&%24format=JSON
+
+ access-control-allow-origin: * 
+ content-encoding: br 
+ content-length: 1335 
+ content-type: application/json; charset=utf-8 
+ date: Thu,15 Oct 2026 07:47:38 GMT 
+ last-modified: Thu,15 Oct 2026 06:16:17 GMT 
+ location:  
+ ratelimit-limit: 20 
+ ratelimit-remaining: 18 
+ ratelimit-reset: 58342 
+ server: nginx 
+ strict-transport-security: max-age=63072000; includeSubDomains; preload 
+ vary: Accept-Encoding 
+ via: kong/2.8.3 
+ x-frame-options: SAMEORIGIN 
+ x-kong-proxy-latency: 125 
+ x-kong-upstream-latency: 12 
+ x-ratelimit-limit-day: 20 
+ x-ratelimit-remaining-day: 18 
+
+[
+  {
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Operators": [
+      {
+        "OperatorID": "16186",
+        "OperatorName": {
+          "Zh_tw": "淡水客運"
+        },
+        "OperatorCode": "TamshuiBus",
+        "OperatorNo": "1104"
+      }
+    ],
+    "SubRouteUID": "NWT160578",
+    "SubRouteID": "160578",
+    "SubRouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "City": "NewTaipei",
+    "CityCode": "NWT",
+    "Stops": [
+      {
+        "StopUID": "NWT114541",
+        "StopID": "114541",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": -1,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114542",
+        "StopID": "114542",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang Community"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4503864,
+          "PositionLat": 25.173067,
+          "GeoHash": "wsqr5wt7x"
+        },
+        "StationID": "74983",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT195846",
+        "StopID": "195846",
+        "StopName": {
+          "Zh_tw": "文宏廣場",
+          "En": "Wenhong Square"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.4512608,
+          "PositionLat": 25.170978,
+          "GeoHash": "wsqr5wnpe"
+        },
+        "StationID": "74648",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114544",
+        "StopID": "114544",
+        "StopName": {
+          "Zh_tw": "淡江柏園",
+          "En": "Danjiangboyuan"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.45078,
+          "PositionLat": 25.170154,
+          "GeoHash": "wsqr5wjfb"
+        },
+        "StationID": "1165605655",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114545",
+        "StopID": "114545",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Village"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 5,
+        "StopPosition": {
+          "PositionLon": 121.4478578,
+          "PositionLat": 25.169,
+          "GeoHash": "wsqr5tgsh"
+        },
+        "StationID": "74645",
+        "LocationCityCode": "NWT"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  },
+  {
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Operators": [
+      {
+        "OperatorID": "16186",
+        "OperatorName": {
+          "Zh_tw": "淡水客運"
+        },
+        "OperatorCode": "TamshuiBus",
+        "OperatorNo": "1104"
+      }
+    ],
+    "SubRouteUID": "NWT160578",
+    "SubRouteID": "160578",
+    "SubRouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "City": "NewTaipei",
+    "CityCode": "NWT",
+    "Stops": [
+      {
+        "StopUID": "NWT114546",
+        "StopID": "114546",
+        "StopName": {
+          "Zh_tw": "捷運淡水站",
+          "En": "MRT DANSHUI Station"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.446540610778,
+          "PositionLat": 25.1674549071321,
+          "GeoHash": "wsqr5tdej"
+        },
+        "StationID": "3842",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114537",
+        "StopID": "114537",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Villa"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4480999,
+          "PositionLat": 25.169193,
+          "GeoHash": "wsqr5tgv1"
+        },
+        "StationID": "74644",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114538",
+        "StopID": "114538",
+        "StopName": {
+          "Zh_tw": "淡江柏園",
+          "En": "Tamkang"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.450727,
+          "PositionLat": 25.169986,
+          "GeoHash": "wsqr5wj9z"
+        },
+        "StationID": "74649",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114543",
+        "StopID": "114543",
+        "StopName": {
+          "Zh_tw": "文宏廣場",
+          "En": "Wenhong Square"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.451395,
+          "PositionLat": 25.171023,
+          "GeoHash": "wsqr5wnpy"
+        },
+        "StationID": "1165604407",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114539",
+        "StopID": "114539",
+        "StopName": {
+          "Zh_tw": "學府路口",
+          "En": "Xuefu Rd. Entrance"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 5,
+        "StopPosition": {
+          "PositionLon": 121.4503368,
+          "PositionLat": 25.171772,
+          "GeoHash": "wsqr5wmkj"
+        },
+        "StationID": "75105",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT114540",
+        "StopID": "114540",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang University City"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 6,
+        "StopPosition": {
+          "PositionLon": 121.450209,
+          "PositionLat": 25.173253,
+          "GeoHash": "wsqr5wtkf"
+        },
+        "StationID": "74704",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT204373",
+        "StopID": "204373",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 7,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101",
+        "LocationCityCode": "NWT"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  },
+  {
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Operators": [
+      {
+        "OperatorID": "16186",
+        "OperatorName": {
+          "Zh_tw": "淡水客運"
+        },
+        "OperatorCode": "TamshuiBus",
+        "OperatorNo": "1104"
+      }
+    ],
+    "SubRouteUID": "NWT157812",
+    "SubRouteID": "157812",
+    "SubRouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28 Sub"
+    },
+    "Direction": 0,
+    "City": "NewTaipei",
+    "CityCode": "NWT",
+    "Stops": [
+      {
+        "StopUID": "NWT152351",
+        "StopID": "152351",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": -1,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152352",
+        "StopID": "152352",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang University City"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4503864,
+          "PositionLat": 25.173067,
+          "GeoHash": "wsqr5wt7x"
+        },
+        "StationID": "74983",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152353",
+        "StopID": "152353",
+        "StopName": {
+          "Zh_tw": "鄧公國小",
+          "En": "Denggong Elementary School"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.4491908,
+          "PositionLat": 25.171269,
+          "GeoHash": "wsqr5wk97"
+        },
+        "StationID": "74652",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152354",
+        "StopID": "152354",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Village"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.4478578,
+          "PositionLat": 25.169,
+          "GeoHash": "wsqr5tgsh"
+        },
+        "StationID": "74645",
+        "LocationCityCode": "NWT"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  },
+  {
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Operators": [
+      {
+        "OperatorID": "16186",
+        "OperatorName": {
+          "Zh_tw": "淡水客運"
+        },
+        "OperatorCode": "TamshuiBus",
+        "OperatorNo": "1104"
+      }
+    ],
+    "SubRouteUID": "NWT157812",
+    "SubRouteID": "157812",
+    "SubRouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28 Sub"
+    },
+    "Direction": 1,
+    "City": "NewTaipei",
+    "CityCode": "NWT",
+    "Stops": [
+      {
+        "StopUID": "NWT152347",
+        "StopID": "152347",
+        "StopName": {
+          "Zh_tw": "捷運淡水站",
+          "En": "MRT Tamsui Sta."
+        },
+        "StopBoarding": 0,
+        "StopSequence": 1,
+        "StopPosition": {
+          "PositionLon": 121.446540610778,
+          "PositionLat": 25.1674549071321,
+          "GeoHash": "wsqr5tdej"
+        },
+        "StationID": "3842",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152348",
+        "StopID": "152348",
+        "StopName": {
+          "Zh_tw": "鄧公里",
+          "En": "Denggong Village"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 2,
+        "StopPosition": {
+          "PositionLon": 121.4480999,
+          "PositionLat": 25.169193,
+          "GeoHash": "wsqr5tgv1"
+        },
+        "StationID": "74644",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152349",
+        "StopID": "152349",
+        "StopName": {
+          "Zh_tw": "鄧公國小",
+          "En": "Denggong Elementary School"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 3,
+        "StopPosition": {
+          "PositionLon": 121.4494646,
+          "PositionLat": 25.171206,
+          "GeoHash": "wsqr5wkbc"
+        },
+        "StationID": "74646",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152350",
+        "StopID": "152350",
+        "StopName": {
+          "Zh_tw": "淡江大學城",
+          "En": "Tamkang University City"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 4,
+        "StopPosition": {
+          "PositionLon": 121.450209,
+          "PositionLat": 25.173253,
+          "GeoHash": "wsqr5wtkf"
+        },
+        "StationID": "74704",
+        "LocationCityCode": "NWT"
+      },
+      {
+        "StopUID": "NWT152355",
+        "StopID": "152355",
+        "StopName": {
+          "Zh_tw": "淡江大學",
+          "En": "Tamkang University"
+        },
+        "StopBoarding": 0,
+        "StopSequence": 5,
+        "StopPosition": {
+          "PositionLon": 121.447573,
+          "PositionLat": 25.174327,
+          "GeoHash": "wsqr5wg7j"
+        },
+        "StationID": "75101",
+        "LocationCityCode": "NWT"
+      }
+    ],
+    "UpdateTime": "2026-10-15T14:16:17+08:00",
+    "VersionID": 8683
+  }
+]
+
+---------------------------------
+
+2.查詢站點到達時間
+  /v2/Bus/EstimatedTimeOfArrival/City/{City}/{RouteName}
+
+curl -X 'GET' \
+  'https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/NewTaipei/%E7%B4%8528?%24top=30&%24format=JSON' \
+  -H 'accept: application/json'
+
+https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/NewTaipei/%E7%B4%8528?%24top=30&%24format=JSON
+
+ access-control-allow-origin: * 
+ content-encoding: br 
+ content-length: 865 
+ content-type: application/json; charset=utf-8 
+ date: Thu,15 Oct 2026 08:03:06 GMT 
+ last-modified: Thu,15 Oct 2026 08:03:00 GMT 
+ location:  
+ ratelimit-limit: 20 
+ ratelimit-remaining: 15 
+ ratelimit-reset: 57414 
+ server: nginx 
+ strict-transport-security: max-age=63072000; includeSubDomains; preload 
+ vary: Accept-Encoding 
+ via: kong/2.8.3 
+ x-frame-options: SAMEORIGIN 
+ x-kong-proxy-latency: 114 
+ x-kong-upstream-latency: 16 
+ x-ratelimit-limit-day: 20 
+ x-ratelimit-remaining-day: 15 
+[
+  {
+    "StopUID": "NWT114543",
+    "StopID": "114543",
+    "StopName": {
+      "Zh_tw": "文宏廣場",
+      "En": "Wenhong Square"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 770,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114544",
+    "StopID": "114544",
+    "StopName": {
+      "Zh_tw": "淡江柏園",
+      "En": "Danjiangboyuan"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "EstimateTime": 666,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114545",
+    "StopID": "114545",
+    "StopName": {
+      "Zh_tw": "鄧公里",
+      "En": "Denggong Village"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "EstimateTime": 712,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114546",
+    "StopID": "114546",
+    "StopName": {
+      "Zh_tw": "捷運淡水站",
+      "En": "MRT DANSHUI Station"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 453,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114537",
+    "StopID": "114537",
+    "StopName": {
+      "Zh_tw": "鄧公里",
+      "En": "Denggong Villa"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 679,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114538",
+    "StopID": "114538",
+    "StopName": {
+      "Zh_tw": "淡江柏園",
+      "En": "Tamkang"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 734,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114539",
+    "StopID": "114539",
+    "StopName": {
+      "Zh_tw": "學府路口",
+      "En": "Xuefu Rd. Entrance"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 806,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114540",
+    "StopID": "114540",
+    "StopName": {
+      "Zh_tw": "淡江大學城",
+      "En": "Tamkang University City"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 48,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114541",
+    "StopID": "114541",
+    "StopName": {
+      "Zh_tw": "淡江大學",
+      "En": "Tamkang University"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "EstimateTime": 423,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT114542",
+    "StopID": "114542",
+    "StopName": {
+      "Zh_tw": "淡江大學城",
+      "En": "Tamkang Community"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "EstimateTime": 581,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT204373",
+    "StopID": "204373",
+    "StopName": {
+      "Zh_tw": "淡江大學",
+      "En": "Tamkang University"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 1,
+    "EstimateTime": 148,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152349",
+    "StopID": "152349",
+    "StopName": {
+      "Zh_tw": "鄧公國小",
+      "En": "Denggong Elementary School"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 1,
+    "EstimateTime": 539,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152348",
+    "StopID": "152348",
+    "StopName": {
+      "Zh_tw": "鄧公里",
+      "En": "Denggong Village"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 1,
+    "EstimateTime": 490,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152347",
+    "StopID": "152347",
+    "StopName": {
+      "Zh_tw": "捷運淡水站",
+      "En": "MRT Tamsui Sta."
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 1,
+    "EstimateTime": 301,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152355",
+    "StopID": "152355",
+    "StopName": {
+      "Zh_tw": "淡江大學",
+      "En": "Tamkang University"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 1,
+    "EstimateTime": 712,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152354",
+    "StopID": "152354",
+    "StopName": {
+      "Zh_tw": "鄧公里",
+      "En": "Denggong Village"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 0,
+    "EstimateTime": 807,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152353",
+    "StopID": "152353",
+    "StopName": {
+      "Zh_tw": "鄧公國小",
+      "En": "Denggong Elementary School"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 0,
+    "EstimateTime": 734,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152352",
+    "StopID": "152352",
+    "StopName": {
+      "Zh_tw": "淡江大學城",
+      "En": "Tamkang University City"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 0,
+    "EstimateTime": 689,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152351",
+    "StopID": "152351",
+    "StopName": {
+      "Zh_tw": "淡江大學",
+      "En": "Tamkang University"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 0,
+    "EstimateTime": 483,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT152350",
+    "StopID": "152350",
+    "StopName": {
+      "Zh_tw": "淡江大學城",
+      "En": "Tamkang University City"
+    },
+    "RouteUID": "NWT16715",
+    "RouteID": "16715",
+    "RouteName": {
+      "Zh_tw": "紅28直",
+      "En": "R28Sub"
+    },
+    "Direction": 1,
+    "EstimateTime": 592,
+    "StopStatus": 0,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  },
+  {
+    "StopUID": "NWT195846",
+    "StopID": "195846",
+    "StopName": {
+      "Zh_tw": "文宏廣場",
+      "En": "Wenhong Square"
+    },
+    "RouteUID": "NWT16288",
+    "RouteID": "16288",
+    "RouteName": {
+      "Zh_tw": "紅28",
+      "En": "R28"
+    },
+    "Direction": 0,
+    "EstimateTime": 642,
+    "StopStatus": 1,
+    "SrcUpdateTime": "2026-10-15T16:02:55+08:00",
+    "UpdateTime": "2026-10-15T16:03:00+08:00"
+  }
+]

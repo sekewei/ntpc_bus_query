@@ -1,0 +1,240 @@
+https://data.ntpc.gov.tw/openapi/swagger-ui/index.html?configUrl=/api/v1/openapi/swagger/config
+https://data.ntpc.gov.tw/openapi/swagger-ui/index.html?configUrl=%2Fapi%2Fv1%2Fopenapi%2Fswagger%2Fconfig&urls.primaryName=%E6%96%B0%E5%8C%97%E5%B8%82%E6%94%BF%E5%BA%9C%E4%BA%A4%E9%80%9A%E5%B1%80%2838%29
+
+1. 取得所有新北市公車站位資訊 (4.8MB, 5seconds)
+curl "https://data.ntpc.gov.tw/api/datasets/34b402a8-53d9-483d-9406-24a682c2d6dc/csv/file" -o bus_stop.csv
+  "id","routeid","namezh","nameen","seqno","pgp","goback","longitude","latitude","address","stoplocationid","showlon","showlat","vector"
+  "213893","5413","四川橋","Sichuan Bridge","0","0","0","121.644816","25.105065","新北市汐止區汐萬路三段252巷27號(向南)","71020","121.644816","25.105065","999"
+
+2. 取得所有新北市公車路線資訊 (約 313KB, 2seconds)
+curl "https://data.ntpc.gov.tw/api/datasets/0ee4e6bf-cee6-4ec8-8fe1-71f544015127/csv/file" -o bus_routes.csv
+  "id","providerid","providername","namezh","nameen","pathattributeid","pathattributename","pathattributeename","buildperiod","departurezh","departureen","destinationzh","destinationen","realsequence","distance","gofirstbustime","backfirstbustime","golastbustime","backlastbustime","peakheadway","offpeakheadway","bustimedesc","headwaydesc","holidaygofirstbustime","holidaybackfirstbustime","holidaygolastbustime","holidaybacklastbustime","holidaybustimedesc","holidaypeakheadway","holidayoffpeakheadway","holidayheadwaydesc","segmentbufferzh","segmentbufferen","ticketpricedescriptionzh","ticketpricedescriptionen"
+  16715,16186,淡水客運,紅28直,R28Sub,157812,紅28直,"R28 Sub",10,淡江大學,"Tamkang University",捷運淡水站,"MRT Tamsui Sta.",33,2.85,0624," ",1930," ",,,,," "," "," "," ",,,,,,,一段票,"1 segments"
+  16288,16186,淡水客運,紅28,R28,160578,紅28,R28,10,淡江大學,"Tamkang University",捷運淡水站,"MRT Tamsui Sta.",120,3.5,0600,0600,2220,2220,,,,,0640,0640,2220,2220,,,,,,,一段票,"1 segments"
+
+3. 取得所有新北市公車預估到站時間 (680KB, 2seconds)
+curl "https://data.ntpc.gov.tw/api/datasets/07f7ccb3-ed00-43c4-966d-08e9dab24e95/csv/file" -o bus_eta.csv
+  "routeid","stopid","estimatetime","goback"
+  "17700","187088","3401","0"
+
+------------
+
+1.查詢新北市公車站位資訊
+  /api/datasets/34b402a8-53d9-483d-9406-24a682c2d6dc/csv
+  
+curl -X 'GET' \
+  'https://data.ntpc.gov.tw/api/datasets/34b402a8-53d9-483d-9406-24a682c2d6dc/csv?page=0&size=100' \
+  -H 'accept: text/csv;charset=UTF-8'
+
+https://data.ntpc.gov.tw/api/datasets/34b402a8-53d9-483d-9406-24a682c2d6dc/csv?page=0&size=100
+
+ access-control-allow-credentials: true 
+ access-control-allow-headers: Authorization,Content-Type 
+ access-control-allow-methods: GET,POST,OPTIONS 
+ access-control-allow-origin: https://data.ntpc.gov.tw 
+ cache-control: no-cache,no-store,must-revalidate 
+ connection: Keep-Alive 
+ content-security-policy: default-src 'self' data: www.google-analytics.com www.google.com use.fontawesome.com; script-src 'self' 'unsafe-inline' www.google.com www.googletagmanager.com www.google-analytics.com www.gstatic.com www.recaptcha.net; style-src 'self' 'unsafe-inline' www.google.com www.gstatic.com use.fontawesome.com fonts.googleapis.com; worker-src 'self' data: blob:; frame-src 'self' map.ntpc.gov.tw www.google.com www.recaptcha.net; font-src 'self' data: fonts.gstatic.com; img-src 'self' data: blob: validator.swagger.io; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none' 
+ content-type: text/csv;charset=UTF-8 
+ cross-origin-opener-policy: same-origin 
+ cross-origin-resource-policy: same-origin 
+ date: Thu,15 Oct 2026 08:51:06 GMT 
+ expires: 0 
+ keep-alive: timeout=5,max=100 
+ permissions-policy: camera=(),microphone=(),geolocation=(),payment=() 
+ pragma: no-cache 
+ referrer-policy: strict-origin-when-cross-origin 
+ strict-transport-security: max-age=63072000; includeSubdomains; preload 
+ transfer-encoding: chunked 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+
+"id","routeid","namezh","nameen","seqno","pgp","goback","longitude","latitude","address","stoplocationid","showlon","showlat","vector"
+"213893","5413","四川橋","Sichuan Bridge","0","0","0","121.644816","25.105065","新北市汐止區汐萬路三段252巷27號(向南)","71020","121.644816","25.105065","999"
+"213894","5413","烘內","Hongnei","1","0","0","121.6439911","25.104621","新北市汐止區汐萬路三段252巷1號","71026","121.6439911","25.104621","999"
+"213895","5413","月牙泉","Yueyaquan","2","0","0","121.6437904","25.103162","新北市汐止區汐萬路三段217巷對面","71015","121.6437904","25.103162","999"
+"213896","5413","烘下","Hongxia","3","0","0","121.642038","25.098575","新北市汐止區汐萬路三段250巷口","71024","121.642038","25.098575","999"
+"213897","5413","堪農山莊","Kannong Shanzhuang","4","0","0","121.6420523","25.09722","新北市汐止區汐萬路三段199巷口對面","71030","121.6420523","25.09722","999"
+"213898","5413","慈惠堂","Cihui Temple","5","0","0","121.644057","25.093758","新北市汐止區汐萬路三段66號","71032","121.644057","25.093758","999"
+"213899","5413","汐萬路三段","Xiwan Rd. Sec. 3","6","0","0","121.643058","25.091852","新北市汐止區汐萬路三段31巷口對面(向南)","1165603896","121.643058","25.091852","999"
+"213900","5413","拱北殿","Gongbeidian","7","0","0","121.643412","25.090723","新北市汐止區八連路一段530巷(向東)","71014","121.643412","25.090723","999"
+"213901","5413","北港國小二","Beigang Elementary School 2","8","0","0","121.64479","25.090384","汐萬路二段335巷口(向南)","71050","121.64479","25.090384","999"
+"213902","5413","北港國小","Beigang Elementary School","9","0","0","121.645666","25.089352","新北市汐止區汐萬路二段333號前(向南)","71018","121.645666","25.089352","135"
+"213903","5413","烘內派出所","Hongnei Police Station","10","0","0","121.646559","25.088186","新北市汐止區汐萬路二段230號對面(向南)","71028","121.646559","25.088186","135"
+"213904","5413","土巷口","Tuxian Entrance","11","0","0","121.648244","25.083826","新北市汐止區汐萬路二段114號對面","71081","121.648244","25.083826","135"
+"213905","5413","明園山莊","Mingyuan Village","12","0","0","121.648912","25.082423","新北市汐止區汐萬路二段65號同向(向南)","71091","121.648912","25.082423","090"
+"213906","5413","川口","Chuankou","13","0","0","121.6493127","25.079195","新北市汐止區汐萬路一段401號前","71085","121.6493127","25.079195","135"
+"213907","5413","孝友別墅","Xiaoyou Villa","14","0","0","121.649909","25.077722","汐止區汐萬路一段357號前(向南)","71089","121.649909","25.077722","999"
+"213908","5413","北港溪口","Beigang Xikou","15","0","0","121.649804","25.076269","汐萬路一段333巷1號前(向南)","70974","121.649804","25.076269","999"
+"213910","5413","樟江大橋","Zhangjiang Bridge","17","0","0","121.644525","25.075856","汐止區康寧街樟江大橋西20M對面(向西)","1001146","121.644525","25.075856","999"
+"213911","5413","伯爵山莊","Bojue Village","18","0","0","121.641733","25.075359","康寧街與伯爵街入口對面(向西)","7670","121.641733","25.075359","999"
+"213912","5413","福德一路口","Fude 1st. Rd. Entrance","19","0","0","121.640323","25.074711","汐止市福德一路口與康寧街口(向南)","70914","121.640323","25.074711","999"
+"213913","5413","伯爵山莊一","Bojue Village (1)","20","0","0","121.6390103","25.07383644","康寧街753巷側同向(向西)","2756","121.6390103","25.07383644","999"
+"213914","5413","濱湖大第","BinHuDaDi","21","0","0","121.63711637178322","25.071954410613305","康寧街625號同向(向南)","426","121.63711637178322","25.071954410613305","999"
+"213915","5413","金龍湖","Jinlonghu","22","0","0","121.63520142081403","25.071476446439604","明峰街10號(向西)","70904","121.63520142081403","25.071476446439604","999"
+"213916","5413","湖東街口","Hudong St. Entrance","23","0","0","121.63344885678443","25.07141234162801","汐止區明峰街43號對面(向西)","70946","121.63344885678443","25.07141234162801","999"
+"213917","5413","金龍里","Jinlong Villiage","24","0","0","121.6310686","25.071147","新北市汐止區明峰街94-1號(向西)","70942","121.6310686","25.071147","999"
+"213918","5413","北峰里(明峰街)","Beifong Village(Mingfong St.)","25","0","0","121.6276293","25.069422","新北市汐止區明峰街200號","70900","121.6276293","25.069422","999"
+"213919","5413","金龍國小(明峰街)","Jinlong Elementary School(Mingfong St.)","26","0","0","121.625833","25.068229","汐止區明峰街288號(向西)","4149","121.625833","25.068229","999"
+"213920","5413","木南煤礦","Munan Coal Mine","27","0","0","121.62487","25.067032","康寧街251號同向(向西)","2725","121.62487","25.067032","999"
+"213921","5413","經貿園區","Economic & Trade Park","28","0","0","121.6212807","25.06666453","康寧街139號同向(向西)","2799","121.6212807","25.06666453","999"
+"213922","5413","北山里","Beishan Village","29","0","0","121.618948","25.066708","康寧街58號同向(向西)","2730","121.618948","25.066708","999"
+"213923","5413","東湖國小","Donghu Elementary School","30","0","0","121.61668","25.068177","東湖路133號同向(向西)","8531","121.61668","25.068177","999"
+"213924","5413","五分社區","Wufen Community","31","0","0","121.614308439756","25.068763284981","東湖路47號同向(向西)","5441","121.614308439756","25.068763284981","999"
+"213925","5413","捷運東湖站(南湖高中)","MRT Donghu Station(Nanhu High School)","32","0","0","121.61150222666","25.0674930032886","康寧路三段220號同向(向南)","1073","121.61150222666","25.0674930032886","999"
+"213926","5413","南港軟體園區北站","Nangang Software Park N.","33","0","0","121.61407454595626","25.0587135046885","三重路19-12號(向南)","1000251","121.61407454595626","25.0587135046885","999"
+"213927","5413","南港軟體園區南站","Nangang Software Park S.","34","0","0","121.61389139258283","25.05655055325109","三重路19-2號(向南)","1000252","121.61389139258283","25.05655055325109","999"
+"213928","5413","南港高工(南港路)","Nangang Vocational High School (Nangang Rd.)","35","0","0","121.609776304165","25.0549683149017","南港路一段257號對面(向西)","1000253","121.609776304165","25.0549683149017","999"
+"213929","5413","南港車站","Nangang Rail Sta.","36","0","0","121.6069591","25.05340065","市民大道八段興中路口(向西)","4848","121.6069591","25.05340065","999"
+"213930","5413","南港行政中心(南港車站)","Nangang Dist. Admin. Center(Nangang Rail Sta.)","37","0","1","121.60712","25.05433","南港路一段(向東)","1000272","121.60712","25.05433","999"
+"213931","5413","南港高工(南港路)","Nangang Vocational High School (Nangang Rd.)","38","0","1","121.61066212694543","25.05493375102052","南港路一段247號同向(向東)","50019","121.61066212694543","25.05493375102052","999"
+"213932","5413","南港軟體園區南站","Nangang Sofeware Park S.","39","0","1","121.6141291","25.05641711","三重路19-12號對向(向北)","1678","121.6141291","25.05641711","999"
+"213933","5413","南港軟體園區北站","Nangang Software Park N.","40","0","1","121.61427996989374","25.05870570745196","臺北市三重路與園區街口南側20公尺(向北)","1000273","121.61427996989374","25.05870570745196","999"
+"213934","5413","捷運東湖站(南湖高中)","MRT Donghu Sta. (Nanhu High School)","41","0","1","121.611573583354","25.0672071869982","捷運東湖站3號出口北側(向北)","70072","121.611573583354","25.0672071869982","999"
+"213935","5413","五分社區","Wufen Community","42","0","1","121.6144033","25.06860831","東湖路82號同向(向東)","986","121.6144033","25.06860831","999"
+"213936","5413","東湖國小","Donghu Elementary School","43","0","1","121.6165906","25.06806969","東湖路128號(向東)","8530","121.6165906","25.06806969","999"
+"213937","5413","北山里","Beishan Village","44","0","1","121.618528","25.066676","康寧街46號同向(向東)","7684","121.618528","25.066676","999"
+"213938","5413","經貿園區","Economic & Trade Park","45","0","1","121.6221492","25.06660779","康寧街163號對向(向東)","7636","121.6221492","25.06660779","999"
+"213939","5413","木南煤礦","Munan Coal Mine","46","0","1","121.624809","25.066839","康寧街267號對向(向東)","2727","121.624809","25.066839","999"
+"213940","5413","金龍國小(明峰街)","Jinlong Elementary School(Mingfong St.)","47","0","1","121.625826","25.068008","汐止區明峰街291號(向東)","70935","121.625826","25.068008","999"
+"213941","5413","金龍里","Jinlong Villiage","48","0","1","121.631037","25.071008","新北市汐止區明峰街109-119(向東)","70941","121.631037","25.071008","999"
+"213942","5413","湖東街口","Hudong St. Entrance","49","0","1","121.633440","25.071290","汐止區明峰街43號(向東)","70945","121.633440","25.071290","999"
+"213943","5413","金龍湖","Jinlonghu","50","0","1","121.634638","25.071398","明峰街19號(向東)","70943","121.634638","25.071398","999"
+"213944","5413","濱湖大第","BinHuDaDi","51","0","1","121.637230","25.071840","康寧街625號對向(向北)","50121","121.637230","25.071840","999"
+"213945","5413","伯爵山莊一","Bojue Village(1)","52","0","1","121.639230","25.073736","康寧街753巷同向(向東)","2757","121.639230","25.073736","999"
+"213946","5413","福德一路口","Fude 1st. Rd. Entrance","53","0","1","121.640526","25.074615","汐止市福德一路與康寧街口(向北)","71011","121.640526","25.074615","999"
+"213947","5413","伯爵山莊","Bojue Village","54","0","1","121.641688","25.075192","汐止區伯爵街2巷側2m同向(向東)","2755","121.641688","25.075192","999"
+"213948","5413","樟江大橋","Zhangjiang Bridge","55","0","1","121.6447007","25.07573198","樟江大橋(向東)","2806","121.6447007","25.07573198","999"
+"213949","5413","凱旋大地","Kaixuan Dadi","56","0","1","121.650154","25.075489","新北市汐止區康寧街885巷口對面(向東)","70996","121.650154","25.075489","135"
+"213950","5413","北港溪口","Beigang Xikou","57","0","1","121.649997","25.076248","汐萬路一段333巷對面(向北)","1165603417","121.649997","25.076248","999"
+"213951","5413","孝友別墅","Xiaoyou Villa","58","0","1","121.6500076","25.077925","汐止區汐萬路一段418巷口(向北)","70994","121.6500076","25.077925","999"
+"213952","5413","川口","Chuankou","59","0","1","121.649302","25.079489","新北市汐止區汐萬路1段409號對面(向西北)","1165603879","121.649302","25.079489","315"
+"213953","5413","明園山莊","Mingyuan Village","60","0","1","121.649542","25.082057","汐止區汐萬路二段63號對向(向北)","71092","121.649542","25.082057","270"
+"213954","5413","土巷口","Tuxian Entrance","61","0","1","121.648260","25.084205","新北市汐止區汐萬路二段114號前","71080","121.648260","25.084205","000"
+"213955","5413","烘內派出所","Hongnei Police station","62","0","1","121.6467886","25.088144","新北市汐止區汐萬路二段232號同向","71027","121.6467886","25.088144","315"
+"213956","5413","北港國小","Beigang Elementary School","63","0","1","121.64572","25.089498","新北市汐止區汐萬路二段275對面","71017","121.64572","25.089498","315"
+"213957","5413","北港國小二","Beigang Elementary School 2","64","0","1","121.644927","25.0904650","汐萬路二段335巷對面(向北)","71049","121.644927","25.0904650","999"
+"213958","5413","拱北殿","Gongbeidian","65","0","1","121.643416","25.090882","汐萬路三段與八連路一段530巷口對面(向北)","71022","121.643416","25.090882","999"
+"213959","5413","汐萬路三段","Xiwan Rd. Sec. 3","66","0","1","121.643177","25.091845","新北市汐止區汐萬路三段31巷口","71021","121.643177","25.091845","999"
+"213960","5413","慈惠堂","Cihui Temple","67","0","1","121.644095","25.093490","新北市汐止區汐萬路三段66號(向北)","71031","121.644095","25.093490","999"
+"213961","5413","堪農山莊","Kannong Shanzhuang","68","0","1","121.6422722","25.097152","新北市汐止區汐萬路三段199號旁","71029","121.6422722","25.097152","999"
+"213962","5413","烘下","Hongxia","69","0","1","121.6421891","25.098663","新北市汐止區汐萬路三段250巷口對面","71023","121.6421891","25.098663","999"
+"213963","5413","月牙泉","Yueyaquan","70","0","1","121.643859","25.103001","新北市汐止區汐萬路三段217巷口(向北)","71016","121.643859","25.103001","999"
+"213964","5413","烘內","Hongnei","71","0","1","121.644183","25.104595","新北市汐止區汐萬路三段252巷7號對面(向北)","71025","121.644183","25.104595","999"
+"213965","5413","四川橋","Sichuan Bridge","72","0","1","121.644996","25.105042","新北市汐止區汐萬路三段252巷27號對面(向北)","1165603421","121.644996","25.105042","999"
+"222991","5413","凱旋大地","Kaixuan Dadi","16","0","0","121.650181","25.075630","新北市汐止區康寧街885巷口(向西)","70912","121.650181","25.075630","999"
+"13968","5415","摩天鎮","Motian Community","1","0","0","121.683273","25.074762","大同路三段611號同向(向南)","2805","121.683273","25.074762","999"
+"13970","5415","亞太科技園區","Asia Pacific Technology Park","2","-1","0","121.682809","25.072605","大同路三段575號(向南)","7615","121.682809","25.072605","999"
+
+------
+
+2.查詢新北市公車路線資訊
+  /api/datasets/0ee4e6bf-cee6-4ec8-8fe1-71f544015127/csv
+  
+curl -X 'GET' \
+  'https://data.ntpc.gov.tw/api/datasets/0ee4e6bf-cee6-4ec8-8fe1-71f544015127/csv?page=0&size=100' \
+  -H 'accept: text/csv;charset=UTF-8'
+
+https://data.ntpc.gov.tw/api/datasets/0ee4e6bf-cee6-4ec8-8fe1-71f544015127/csv?page=0&size=100
+
+ access-control-allow-credentials: true 
+ access-control-allow-headers: Authorization,Content-Type 
+ access-control-allow-methods: GET,POST,OPTIONS 
+ access-control-allow-origin: https://data.ntpc.gov.tw 
+ cache-control: no-cache,no-store,must-revalidate 
+ connection: Keep-Alive 
+ content-type: text/csv;charset=UTF-8 
+ cross-origin-opener-policy: same-origin 
+ cross-origin-resource-policy: same-origin 
+ date: Thu,15 Oct 2026 08:53:00 GMT 
+ expires: 0 
+ keep-alive: timeout=5,max=100 
+ permissions-policy: camera=(),microphone=(),geolocation=(),payment=() 
+ pragma: no-cache 
+ referrer-policy: strict-origin-when-cross-origin 
+ strict-transport-security: max-age=63072000; includeSubdomains; preload 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+
+"id","providerid","providername","namezh","nameen","pathattributeid","pathattributename","pathattributeename","buildperiod","departurezh","departureen","destinationzh","destinationen","realsequence","distance","gofirstbustime","backfirstbustime","golastbustime","backlastbustime","peakheadway","offpeakheadway","bustimedesc","headwaydesc","holidaygofirstbustime","holidaybackfirstbustime","holidaygolastbustime","holidaybacklastbustime","holidaybustimedesc","holidaypeakheadway","holidayoffpeakheadway","holidayheadwaydesc","segmentbufferzh","segmentbufferen","ticketpricedescriptionzh","ticketpricedescriptionen"
+16715,16186,淡水客運,紅28直,R28Sub,157812,紅28直,"R28 Sub",10,淡江大學,"Tamkang University",捷運淡水站,"MRT Tamsui Sta.",33,2.85,0624," ",1930," ",,,,," "," "," "," ",,,,,,,一段票,"1 segments"
+16288,16186,淡水客運,紅28,R28,160578,紅28,R28,10,淡江大學,"Tamkang University",捷運淡水站,"MRT Tamsui Sta.",120,3.5,0600,0600,2220,2220,,,,,0640,0640,2220,2220,,,,,,,一段票,"1 segments"
+
+------
+3.查詢新北市公車預估到站時間
+  /api/datasets/07f7ccb3-ed00-43c4-966d-08e9dab24e95/csv
+  
+curl -X 'GET' \
+  'https://data.ntpc.gov.tw/api/datasets/07f7ccb3-ed00-43c4-966d-08e9dab24e95/csv?page=0&size=100' \
+  -H 'accept: text/csv;charset=UTF-8'
+
+https://data.ntpc.gov.tw/api/datasets/07f7ccb3-ed00-43c4-966d-08e9dab24e95/csv?page=0&size=100
+
+ access-control-allow-credentials: true 
+ access-control-allow-headers: Authorization,Content-Type 
+ access-control-allow-methods: GET,POST,OPTIONS 
+ access-control-allow-origin: https://data.ntpc.gov.tw 
+ cache-control: no-cache,no-store,must-revalidate 
+ connection: Keep-Alive 
+ content-length: 2794 
+ content-security-policy: default-src 'self' data: www.google-analytics.com www.google.com use.fontawesome.com; script-src 'self' 'unsafe-inline' www.google.com www.googletagmanager.com www.google-analytics.com www.gstatic.com www.recaptcha.net; style-src 'self' 'unsafe-inline' www.google.com www.gstatic.com use.fontawesome.com fonts.googleapis.com; worker-src 'self' data: blob:; frame-src 'self' map.ntpc.gov.tw www.google.com www.recaptcha.net; font-src 'self' data: fonts.gstatic.com; img-src 'self' data: blob: validator.swagger.io; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none' 
+ content-type: text/csv;charset=UTF-8 
+ cross-origin-opener-policy: same-origin 
+ cross-origin-resource-policy: same-origin 
+ date: Thu,15 Oct 2026 08:54:18 GMT 
+ expires: 0 
+ keep-alive: timeout=5,max=100 
+ permissions-policy: camera=(),microphone=(),geolocation=(),payment=() 
+ pragma: no-cache 
+ referrer-policy: strict-origin-when-cross-origin 
+ strict-transport-security: max-age=63072000; includeSubdomains; preload 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+
+"routeid","stopid","estimatetime","goback"
+"17700","187088","3401","0"
+"17700","187089","3435","0"
+"16565","187098","-3","3"
+"16552","187091","-3","3"
+"16552","187092","-3","3"
+"16552","187093","3051","1"
+"17700","187090","3469","0"
+"17693","187099","-3","3"
+"17700","187066","1716","0"
+"17700","187067","1756","0"
+"17700","187068","2075","0"
+"17700","187069","2121","0"
+"17700","187073","2308","0"
+"17700","187074","2398","0"
+"17700","187075","2471","0"
+"17700","187076","2526","0"
+"17700","187070","2193","0"
+"17700","187071","2234","0"
+"17700","187072","2262","0"
+"17700","187077","2555","0"
+"17700","187078","2778","0"
+"17700","187079","2858","0"
+"17700","187084","3151","0"
+"17700","187085","3214","0"
+"17700","187086","3301","0"
+"17700","187087","3325","0"
+"17700","187080","2893","0"
+"17700","187081","2984","0"
+"17700","187082","3027","0"
+"17700","187083","3077","0"
+"16485","128750","1720","2"
+"16485","128751","1811","2"
+"16485","128752","0","0"
+"16485","128753","103","0"
+"16485","128754","273","0"
+"16485","128744","1151","2"
+"16485","128745","1214","2"
+"16485","128746","1268","2"
+"16485","128747","1426","2"
+"16485","128748","1564","2"
+"16485","128749","1647","2"
+"16485","128741","839","2"
+"16485","128742","1017","2"
+"16485","128743","1068","2"
+"16485","128738","378","2"
+"16485","128739","-3","3"
