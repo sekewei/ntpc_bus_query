@@ -139,6 +139,13 @@
           <option value="R28" selected>R28</option>
           <option value="857">857</option>
         </select>
+
+        <label for="directionSelect">Direction:</label>
+        <select id="directionSelect">
+          <option value="0">0</option>
+          <option value="1" selected>1</option>
+        </select>
+
         <button id="loadBtn">Load route data</button>
       </div>
 
@@ -163,6 +170,7 @@
 
     <script>
       const routeSelect = document.getElementById('routeSelect');
+      const directionSelect = document.getElementById('directionSelect');
       const outputEl = document.getElementById('output');
       const statusEl = document.getElementById('status');
       const loadBtn = document.getElementById('loadBtn');
@@ -239,9 +247,10 @@
 
       async function loadRoute() {
         const routeName = routeSelect.value;
-        const endpoint = `https://ntpc-bus-query.sekewei.workers.dev/api/bus/route?city=NewTaipei&routeName=${encodeURIComponent(routeName)}&direction=1`;
+        const direction = directionSelect.value;
+        const endpoint = `https://ntpc-bus-query.sekewei.workers.dev/api/bus/route?city=NewTaipei&routeName=${encodeURIComponent(routeName)}&direction=${direction}`;
 
-        statusEl.textContent = `Requesting ${routeName}...`;
+        statusEl.textContent = `Requesting ${routeName} (direction ${direction})...`;
         outputEl.textContent = 'Loading...';
         routeTableBody.innerHTML = '<tr><td colspan="2">Loading...</td></tr>';
 
@@ -260,11 +269,12 @@
           const data = await response.json();
           renderTable(data);
           outputEl.textContent = JSON.stringify(data, null, 2);
-          statusEl.textContent = `Success (${response.status}) for ${routeName}`;
+          statusEl.textContent = `Success (${response.status}) for ${routeName} / direction ${direction}`;
         } catch (error) {
           const errorData = {
             error: error.message,
             routeName,
+            direction,
             endpoint
           };
 
