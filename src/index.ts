@@ -9,13 +9,9 @@ import {
 
 export interface Env {
   ENVIRONMENT: string
-  /** bus_routes.csv content, optionally uploaded via `wrangler secret` */
-  BUS_ROUTES_CSV?: string
-  /** bus_stop.csv content, optionally uploaded via `wrangler secret` */
-  BUS_STOP_CSV?: string
-  /** Route CSV endpoint override */
+  /** Route CSV endpoint override (defaults to the live NTPC feed) */
   ROUTE_CSV_URL?: string
-  /** Stop CSV endpoint override */
+  /** Stop CSV endpoint override (defaults to the live NTPC feed) */
   STOP_CSV_URL?: string
   /** Live ETA CSV endpoint (NTPC open data) */
   ETA_CSV_URL?: string
@@ -39,10 +35,11 @@ interface EtaCache {
 let busData: BusData | null = null
 let etaCache: EtaCache | null = null
 
-// Fetch raw CSV payloads from the NTPC open-data endpoints.
-// We intentionally prefer the live endpoint unless local env bindings are injected.
+// Fetch raw CSV payloads from the NTPC open-data endpoints on startup.
+// The Worker should always load current network data here instead of reusing
+// any CSV strings from environment bindings.
 async function fetchText(url: string, label: string): Promise<string> {
-  const res = await fetch(url)
+  const res = await fetch(url, { cache: 'no-store' })
   if (!res.ok) {
     throw new Error(`Failed to fetch ${label}: HTTP ${res.status} from ${url}`)
   }
@@ -53,18 +50,14 @@ async function fetchText(url: string, label: string): Promise<string> {
 // This caches the route/stop indexes so repeated requests do not rescan the full CSV payload.
 async function getBusData(env: Env): Promise<BusData> {
   if (!busData) {
-    const routeCsvRaw = env.BUS_ROUTES_CSV ?? ''
-    const stopCsvRaw = env.BUS_STOP_CSV ?? ''
-    console.log('[debug] env route csv length:', routeCsvRaw.length)
-    console.log('[debug] env stop csv length:', stopCsvRaw.length)
-    console.log('[debug] env route csv contains 紅28:', routeCsvRaw.includes('紅28'))
-
-    const routesCsv =
-      routeCsvRaw.trim() ||
-      await fetchText(env.ROUTE_CSV_URL || DEFAULT_ROUTE_URL, 'route CSV')
-    const stopsCsv =
-      stopCsvRaw.trim() ||
-      await fetchText(env.STOP_CSV_URL || DEFAULT_STOP_URL, 'stop CSV')
+    const routesCsv = await fetchText(
+      env.ROUTE_CSV_URL || DEFAULT_ROUTE_URL,
+      'route CSV'
+    )
+    const stopsCsv = await fetchText(
+      env.STOP_CSV_URL || DEFAULT_STOP_URL,
+      'stop CSV'
+    )
 
     busData = buildBusData(routesCsv, stopsCsv)
 
