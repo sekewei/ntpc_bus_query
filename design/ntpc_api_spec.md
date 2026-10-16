@@ -423,6 +423,25 @@ export default {
 }
 ```
 
+### 10.4 已實作的部署與執行資訊
+
+現有的 Worker 端點已部署並可供測試：
+
+```text
+https://ntpc-bus-query.sekewei.workers.dev
+```
+
+實作上已確認的行為：
+
+- Worker 在 isolate 內只初始化一次 `busData`，避免每次請求重掃整份 CSV
+- 路線與站序資料預設會直接從新北市公開資料端點抓取，不依賴本地 CSV 檔案
+- 若 Worker 環境中提供 `BUS_ROUTES_CSV` 或 `BUS_STOP_CSV`，會優先使用這些值
+- 路線名稱支援 `紅28`、`R28`、`r28`、`red 28` 等常見別名解析
+- `direction` 必須明確為 `0` 或 `1`，並對應 `goback` 欄位
+- `routeId` 解析後使用 `stopIndex[routeId|direction]` 取出該方向站序，而非把所有方向站點混在一起
+
+> 注意：路線名稱如 `R28` 在原始資料中實際上可能有兩個方向的站序；若在錯誤方向上查詢，結果看起來像是少了一些站點，通常只是該站位於另一個方向。這也是設計上必須明確要求 `direction` 參數的原因。
+
 ---
 
 ## 11. 設計總結
